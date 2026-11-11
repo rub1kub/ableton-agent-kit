@@ -10,7 +10,7 @@ Do **not** assume migration would have solved the music automatically. The obser
 
 CanArslanDev's fork is especially interesting for a later audio-aware workflow: render analysis, stem capture, reference comparison, snapshots and project memory are integrated. However its README requires Live 12.3 for `add_device`/`apply_device_chain`, some automation is real-time recording, and its companion SDK renderer targets Live 12.4.5+ Suite and is explicitly not yet run in Live by its authors. It is **not** a verified drop-in replacement for 12.2.2.
 
-No native migration or comparative listening benchmark is claimed here. The current working installation remains a fallback until a disposable-set acceptance test passes.
+Follow-up: the local installation was migrated to wstierhout 1.8.1 and passed basic native checks in Live 12.2.2 (version match, state/return queries, one parameter change and Undo). See [verification.md](verification.md). This does not establish every listed capability or a comparative listening benchmark; the previous setup is retained for rollback.
 
 ## Capability matrix
 
@@ -52,4 +52,4 @@ Inspected revisions:
 6. Use the selected backend's own connected tools for control. Agent Kit's direct `LiveClient` speaks the **legacy newline protocol only**; do not send its payloads to an incompatible server. `backend-plan` maps an observed tool list to tasks without connecting or mutating anything.
 7. Keep a rollback path. Do not upgrade Live, change drivers or overwrite projects merely to enable a fork's optional features.
 
-The recommendation is based on source inspection and workflow fit, not an assertion that an untested backend already works on the user's machine.
+The recommendation combines source inspection, workflow fit and the narrow native checks recorded in verification.md. Other versions and advanced operations still require their own acceptance tests.

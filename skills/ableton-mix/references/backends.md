@@ -4,7 +4,7 @@
 
 ## Preferred routes
 
-- **wstierhout/ableton-live-mcp 1.8.1** is the first general-control candidate for the observed Live 12.2.2 workflow: typed tools, `get_session_snapshot`, `session_diff`, batch and `ABLETON_TOOLSETS`. Use connected native tools, current schemas and only the domains needed. The source was inspected; native operation on the user's build still needs acceptance testing.
+- **wstierhout/ableton-live-mcp 1.8.1** is the preferred general-control route for the observed Live 12.2.2 workflow: typed tools, `get_session_snapshot`, `session_diff`, batch and `ABLETON_TOOLSETS`. Use connected native tools, current schemas and only the domains needed. Basic native state/return queries, a parameter batch and Undo passed in Live 12.2.2; this does not validate every operation or another installation.
 - **CanArslanDev/ableton-live-mcp 2.3.0** offers integrated rendered analysis, snapshots, memory, mix diagnosis and reference comparison. It uses another SDK major and protocol. Some convenience device loading requires Live 12.3; its SDK renderer targets 12.4.5+ Suite and was described as not yet native-tested. Use it only when those capabilities/version requirements are verified, not because a demo lists more features.
 - **Legacy LiveMCP + Agent Kit extension** remains a supported fallback. Use `aa_*` paginated queries and guarded parameter batches. The direct `ableton_agent.live.LiveClient` implements only this newline protocol; it is not a universal Ableton MCP client.
 - **Original ahujasid/ableton-mcp** must be judged by its own current interface. Do not assign fork-only features to it.

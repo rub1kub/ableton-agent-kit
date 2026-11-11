@@ -25,6 +25,8 @@ CLI smoke tests exercise report output and packaging. The CI matrix runs Python 
 
 ## Native Ableton acceptance gate
 
+Follow-up installation on 2026-11-11: wstierhout 1.8.1 was installed into a separate environment, its matching Remote Script was selected in Live 12.2.2 Suite, and its doctor returned `ok: true`. A real stdio MCP session listed 138 tools from eight selected groups and read session state, track inventory, returns and Reverb parameters. In an empty test set, a batch changed Return A Reverb Dry/Wet from 100% to 99%; readback confirmed the change, native Undo restored 100%, all Reverb parameters matched their original values and the session snapshot was unchanged. Transport remained stopped. This is a narrow native acceptance check, not validation of every tool, audio capture, rack editing or project export. The legacy extension below remains separately unverified in Live.
+
 The initial extension targets the observed dispatcher layout of a LiveMCP installation used with Live 12.2.2 Suite. At development preflight its TCP endpoint was unavailable. Therefore initial automated results do **not** prove native extension loading, device parameter writes, project opening, edition compatibility or real playback capture. No active Live installation is modified by the staging command.
 
 Before using a new Live/LiveMCP version for paid or irreplaceable work:

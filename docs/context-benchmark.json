@@ -5,7 +5,7 @@
   "question": "Find track/device names and inspect one selected device; other parameter values are unnecessary",
   "eager_full_state_tokens": 281403,
   "compact_inventory_plus_selected_device_tokens": 3723,
-  "skill_entry_tokens": 1026,
-  "entry_plus_all_references_tokens": 8391,
+  "skill_entry_tokens": 1053,
+  "entry_plus_all_references_tokens": 8433,
   "limitations": "Pagination adds some framing. Savings depend on task; eventually inspecting every parameter reduces the advantage."
 }

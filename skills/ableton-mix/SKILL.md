@@ -10,7 +10,7 @@ Work from the actual set, source audio and the user's approvals. A convincing mi
 ## Start cheaply
 
 1. Identify the task and protected choices: approved hook, long tail, vocal timbre, stereo movement, dry originals. Keep these as concrete invariants in a small local brief. Do not make the user repeat established preferences.
-2. Find the toolkit with `ableton-agent --version` or run `scripts/run.py doctor --live` from this skill. The installer writes a local `runtime.json`; it is not portable to another machine.
+2. Find the toolkit with `ableton-agent --version` or run `scripts/run.py doctor` from this skill. Discover the control backend before probing Live: this toolkit's `doctor --live` and direct `live-*` commands target the legacy protocol only. The installer writes a local `runtime.json`; it is not portable to another machine.
 3. Identify the connected backend from its actual tools/capabilities; read [backends.md](references/backends.md) if it is unfamiliar. Inspect live state and the saved set separately. Use the backend's compact overview; for the legacy extension use `live-snapshot --limit 16 --out ...`. `als-audit SET --out ...` inspects the saved file. If Live has unsaved edits, a disk hash cannot capture them. Ask for the necessary save once; continue independent source analysis meanwhile.
 4. Preserve the existing version before editing. Work in a new set or native Undo-bounded edits. Never overwrite raw recordings, replace originals with processed audio, or change drivers/hardware inputs/monitoring as a side effect.
 
