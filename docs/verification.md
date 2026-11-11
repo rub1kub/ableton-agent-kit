@@ -5,6 +5,8 @@ This file distinguishes software verification from musical and application verif
 ## Recorded local results (2026-11-11)
 
 - Main suite: 53 tests passed after the final project-collection changes; Ruff passed. The wheel and source distribution built successfully. Check CI for the exact published commit.
+- The built wheel was installed into a separate target directory and its CLI successfully ran `doctor`.
+- Public GitHub Actions [run 43082752346](https://github.com/rub1kub/ableton-agent-kit/actions/runs/43082752346) could not start any job: GitHub reported an account billing lock. The Windows/Linux, Python 3.11/3.13 matrix is configured but **not verified**. Local suite results above are from Windows, Python 3.12.10; they do not establish the entire matrix.
 - Real stdio MCP initialization, seven-tool listing, echo planning and disabled-write rejection passed.
 - Windows process-loopback smoke: a generated 0.3-second 1 kHz tone was captured at peak 0.005005, with zero reported packet discontinuities. This validates the local process capture path, **not** Ableton's driver path.
 - Optional pitch smoke: generated 440 Hz tone yielded median voiced estimate 439.80 Hz. Key candidates and plotting commands executed; the plot was visually inspected. A single tone cannot prove key detection quality.
