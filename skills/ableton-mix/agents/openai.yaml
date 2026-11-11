@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ableton Mix"
+  short_description: "Evidence-driven vocal mixing and Ableton tools"
+  default_prompt: "Use $ableton-mix to inspect my Ableton project, improve the mix and verify the rendered result while preserving my recordings."

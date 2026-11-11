@@ -1,0 +1,11 @@
+{
+  "benchmark": "synthetic orientation and one-device inspection",
+  "tokenizer": "cl100k_base",
+  "scope": "24 tracks, 8 devices each, 50 parameters each; NOT measured model billing or a real song",
+  "question": "Find track/device names and inspect one selected device; other parameter values are unnecessary",
+  "eager_full_state_tokens": 281403,
+  "compact_inventory_plus_selected_device_tokens": 3723,
+  "skill_entry_tokens": 1026,
+  "entry_plus_all_references_tokens": 8391,
+  "limitations": "Pagination adds some framing. Savings depend on task; eventually inspecting every parameter reduces the advantage."
+}

@@ -1,0 +1,10 @@
+include README.md SECURITY.md THIRD_PARTY.md AGENTS.md
+recursive-include LICENSES *.txt
+recursive-include docs *.md *.json
+recursive-include skills *.md *.py *.yaml *.txt
+recursive-include extensions *.py
+recursive-include scripts *.py
+recursive-include benchmarks *.py
+recursive-include tests *.py
+global-exclude __pycache__ *.py[cod]
+exclude skills/ableton-mix/runtime.json
