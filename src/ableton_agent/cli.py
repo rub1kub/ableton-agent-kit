@@ -44,6 +44,10 @@ def parser():
     backend.add_argument("tools", help="JSON tools/list result or array, unqualified names")
     backend.add_argument("--live-version")
     backend.add_argument("--out")
+    plugin = sub.add_parser("plugin-probe", help="Load a trusted installed VST3 in a separate local host")
+    plugin.add_argument("path")
+    plugin.add_argument("--timeout", type=float, default=90)
+    plugin.add_argument("--out", required=True)
     compare = sub.add_parser("audio-compare")
     compare.add_argument("reference")
     compare.add_argument("candidate")
@@ -106,7 +110,7 @@ def run(args):
     if c == "doctor":
         result = {"version": __version__, "python": sys.version.split()[0], "platform": sys.platform,
                   "optional": {m: importlib.util.find_spec(m) is not None for m in
-                               ("mcp", "librosa", "matplotlib", "faster_whisper", "mutagen", "imageio_ffmpeg", "comtypes")}}
+                               ("mcp", "librosa", "matplotlib", "faster_whisper", "mutagen", "imageio_ffmpeg", "comtypes", "pedalboard")}}
         if args.live:
             from .live import LiveClient
             try:
@@ -143,6 +147,9 @@ def run(args):
         from .backends import plan_backend
         inventory = read_json(args.tools)
         return plan_backend(inventory.get("tools", []) if isinstance(inventory, dict) else inventory, args.live_version)
+    if c == "plugin-probe":
+        from .plugins import probe
+        return probe(args.path, args.timeout)
     if c in ("pitch", "key", "transcribe", "echo-plan"):
         from . import music
         if c == "pitch":

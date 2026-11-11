@@ -1,6 +1,6 @@
 ---
 name: ableton-mix
-description: Prepare, edit, mix and verify Ableton Live projects using LiveMCP, local audio analysis and reversible project tools. Use for vocal timing/tuning, creative effects, arrangement, missing media and delivery; preserve the user's musical intent and recordings.
+description: Prepare, edit, mix and verify Ableton Live projects using Ableton MCP, local audio analysis and reversible project tools. Use for vocal timing/tuning, creative effects, arrangement, missing media and delivery; preserve the user's musical intent and recordings.
 ---
 
 # Ableton Mix
@@ -25,6 +25,7 @@ Work from the actual set, source audio and the user's approvals. A convincing mi
 | Inspect/revise `.als`, relink media, preserve takes | [projects.md](references/projects.md) |
 | Analyze waveform, gaps, pitch, loudness, capture and compare | [evidence.md](references/evidence.md) |
 | Vocal editing, tuning, gain, EQ, dynamics | [vocals.md](references/vocals.md) |
+| Choose and control free VST3s; expose/cache parameters; use an offline host | [plugins.md](references/plugins.md) |
 | Echo, pitched answers, stereo movement, filters and transitions | [effects.md](references/effects.md) |
 | Collect, export, tag WAV/MP3, deliver | [delivery.md](references/delivery.md) |
 | Recognize and recover demonstrated failure modes | [troubleshooting.md](references/troubleshooting.md) |
@@ -35,7 +36,7 @@ For each pass, state the audible problem, affected time range, intended change a
 
 Separate the intelligible central performance from optional width/motion layers when helpful. Treat copied layers as artificial support, not independent recorded doubles. Fit word repeats into actual gaps; allow overlap when explicitly desired. Tonality analysis proposes candidates: inspect stable vowels and musical phrases before tuning. No blanket pitch snapping of consonants or guessed key changes.
 
-Use native operations where available. Offline editing is a fallback for a saved copy; it needs structural checks **and** a native reopen check. The toolkit's limited revision commands do not claim full arrangement authoring. Use available LiveMCP tools or controlled UI for unsupported operations, with the same preservation rules.
+Use native operations where available. Offline editing is a fallback for a saved copy; it needs structural checks **and** a native reopen check. The toolkit's limited revision commands do not claim full arrangement authoring. Use the connected backend's tools or controlled UI for unsupported operations, with the same preservation rules.
 
 ## Verify and report honestly
 

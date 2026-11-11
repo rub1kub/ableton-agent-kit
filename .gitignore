@@ -26,3 +26,10 @@ captures/
 .env*
 !*.example
 skills/**/runtime.json
+*.vst3
+*.clap
+*.dll
+*.exe
+*.vstpreset
+*.fxp
+*.fxb

@@ -22,6 +22,7 @@ plot = ["matplotlib>=3.8,<4"]
 windows = ["comtypes>=1.4,<2; sys_platform == 'win32'"]
 mcp = ["mcp>=1.12,<2"]
 benchmark = ["tiktoken>=0.9,<1"]
+plugins = ["pedalboard>=0.9.26,<1"]
 
 [project.scripts]
 ableton-agent = "ableton_agent.cli:main"

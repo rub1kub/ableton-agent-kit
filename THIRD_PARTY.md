@@ -23,3 +23,5 @@ Official technical references used:
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 
 Links document API concepts, not a claim that every installed Live edition or Remote Script behaves identically. Short implementation guidance is original; manuals are not bundled.
+
+The optional `plugins` extra installs Spotify's [Pedalboard](https://github.com/spotify/pedalboard), GPL-3.0, as a separate dependency. No external plugin binaries, installers or factory presets are bundled; their sources and license categories are listed in [docs/free-plugins.md](docs/free-plugins.md).

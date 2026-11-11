@@ -4,7 +4,7 @@ This file distinguishes software verification from musical and application verif
 
 ## Recorded local results (2026-11-11)
 
-- Main suite: 53 tests passed after the final project-collection changes; Ruff passed. The wheel and source distribution built successfully. Check CI for the exact published commit.
+- Main suite: 55 tests passed after adding VST3 bundle fingerprint/resolution and timeout validation; Ruff passed. The updated wheel and source distribution built successfully. Check CI for the exact published commit.
 - The built wheel was installed into a separate target directory and its CLI successfully ran `doctor`.
 - Public GitHub Actions [run 43082752346](https://github.com/rub1kub/ableton-agent-kit/actions/runs/43082752346) could not start any job: GitHub reported an account billing lock. The Windows/Linux, Python 3.11/3.13 matrix is configured but **not verified**. Local suite results above are from Windows, Python 3.12.10; they do not establish the entire matrix.
 - Real stdio MCP initialization, seven-tool listing, echo planning and disabled-write rejection passed.
@@ -14,6 +14,7 @@ This file distinguishes software verification from musical and application verif
 - Third-party comparison: five selected wstierhout dispatcher/session-identity tests passed; 22 CanArslanDev audio/mix-analysis tests passed in a separate SDK-2 environment. These are narrow source-level checks, **not** a live-server benchmark.
 - The first expanded-backend test attempt in the SDK-1 toolkit environment failed at import; using its declared SDK-2 dependency in a separate environment resolved that mismatch. This is why the setup guide requires isolation.
 - Skill frontmatter validation passed. The skill was installed locally and its runtime wrapper successfully ran `doctor`. The extension was staged from the actual installed legacy layout without changing the installed source.
+- Eleven external VST3 entries passed separate-host DSP smoke tests with Pedalboard 0.9.26. Their parameters were inspected; no native Live plugin-loading pass is claimed. See [free-plugins.md](free-plugins.md).
 
 The synthetic context-size experiment is reproducible with `benchmarks/context_cost.py` and recorded in [context-benchmark.json](context-benchmark.json). It compares information selection, not model billing or total mixing cost.
 
